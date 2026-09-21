@@ -1,0 +1,21 @@
+name: Synthetic tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check release files
+        run: python3 scripts/check-release.py
+      - name: Test synthetic fixtures
+        run: swift test
+      - name: Build app and command line tool
+        run: |
+          ./scripts/build-app.sh
+          swift build -c release --product acf
+          .build/release/acf --help
+          python3 scripts/test-cli.py .build/release/acf

@@ -1,0 +1,8 @@
+{
+  "codexHome": "~/.codex",
+  "secondaryCodexHome": "",
+  "claudeHome": "~/.claude",
+  "codexExecutable": "codex",
+  "claudeExecutable": "claude",
+  "stateDirectory": "~/Library/Application Support/Agent Conversation Finder Shared"
+}
