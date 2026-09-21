@@ -15,23 +15,24 @@ public enum ConversationSearch {
 
         let presentation = ConversationTitleGenerator.presentation(for: record)
         let digest = record.digest
-        let searchableText = ([
+        var fields: [String] = [
             alias ?? "",
             presentation.title,
             record.title,
             record.workingDirectory,
             record.sessionID,
             record.source.displayName,
-            record.environment.displayName,
-            digest?.summary ?? "",
-            digest?.currentFocus ?? "",
-            digest?.topics.joined(separator: " ") ?? "",
-            digest?.milestones.joined(separator: "\n") ?? "",
-            digest?.openQuestions.joined(separator: "\n") ?? "",
-            digest?.searchableText ?? ""
-        ] + record.recentUserMessages)
-            .map(normalized)
-            .joined(separator: "\n")
+            record.environment.displayName
+        ]
+        fields.append(digest?.summary ?? "")
+        fields.append(digest?.currentFocus ?? "")
+        fields.append(digest?.topics.joined(separator: " ") ?? "")
+        fields.append(digest?.milestones.joined(separator: "\n") ?? "")
+        fields.append(digest?.openQuestions.joined(separator: "\n") ?? "")
+        fields.append(digest?.searchableText ?? "")
+        fields.append(contentsOf: record.recentUserMessages)
+        let normalizedFields: [String] = fields.map(normalized)
+        let searchableText = normalizedFields.joined(separator: "\n")
 
         return tokens.allSatisfy(searchableText.contains)
     }
