@@ -1,4 +1,6 @@
-# Agent 会话寻回器
+# Agent 会话寻回器（macOS）
+
+**适用平台：Mac / macOS 14 及以上。** 图形应用和随仓库提供的 `acf` CLI 都面向 macOS 构建与运行；本仓库不提供 Windows、Linux、iOS 或 Android 版本。
 
 一个本地运行的 macOS SwiftUI 应用，统一查找 Codex App、Codex CLI 和 Claude Code 主会话。按工作目录浏览、搜索正文、查看摘要、管理本地别名，并复制与数据环境匹配的恢复命令。附带 `acf` 命令行工具，方便 Agent 做配置诊断和本地检索。
 

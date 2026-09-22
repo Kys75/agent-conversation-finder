@@ -2,6 +2,8 @@
 
 This is a local macOS application and a read-only search CLI. Read README.md before changing or configuring it.
 
+Both the app and the bundled CLI target macOS 14 or later. This repository does not provide Windows, Linux or mobile builds; check the platform before following installation steps.
+
 ## First run
 
 1. Check macOS >= 14, `swift --version`, `/usr/bin/sqlite3 --version`, and available Codex/Claude executables. Do not accept system licenses or disable security settings for the user.
