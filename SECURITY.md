@@ -6,6 +6,6 @@ The app reads local conversation content and creates a sensitive search index. D
 
 The application itself has no network client. The Codex executable invoked for archive/unarchive is third-party software under the user's control; its behavior and updates are outside this project's control. Recovery commands are copied for manual execution, preserve default permission prompts and explicitly select the source configuration directory. A malicious configured executable remains malicious; only configure trusted installations.
 
-Do not publish raw errors, CLI scan output or screenshots before inspecting them: they can reveal paths, session identifiers or message text. Report a bug using an invented JSONL/SQLite example and the relevant software versions. In a private repository, share findings with its owner through the existing private collaboration channel; do not paste private records into public issues.
+Do not publish raw errors, CLI scan output or screenshots before inspecting them: they can reveal paths, session identifiers or message text. Report a bug using an invented JSONL/SQLite example and the relevant software versions. Public issues must contain only sanitized descriptions and synthetic reproductions; never attach private records or credentials.
 
 `python3 scripts/check-release.py` checks the tracked/candidate file inventory and common credentials/path patterns. It cannot guarantee privacy or detect every secret. Review staged diffs and Git history before sharing, and remove accidentally committed sensitive data from history before any push.

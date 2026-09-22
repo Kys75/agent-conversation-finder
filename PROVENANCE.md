@@ -15,6 +15,6 @@ For this shareable edition, fixed personal environment assumptions became explic
 
 The code uses Apple Foundation, SwiftUI, AppKit, XCTest and the system SQLite command. No third-party Swift packages or external service credentials are required. Codex and Claude Code are separate products; their local storage formats and CLI interfaces may change. This repository does not redistribute those products and does not claim affiliation with their vendors.
 
-No public open-source license is asserted here. Access and reuse should follow the repository owner's permissions; choose a license explicitly before any future public release.
+The source is publicly visible. No general open-source license is asserted here; use and redistribution follow the repository owner's permissions.
 
 The original conversation-grid application icon is retained as a single required ICNS asset. Its ICNS info property list and any PNG text/time/EXIF chunks are removed; generation references and unused bitmap variants are not distributed.
